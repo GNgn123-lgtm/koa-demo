@@ -2,7 +2,7 @@ var webpack = require('webpack')
 var path = require('path')
 var ExtractTextPlugin = require("extract-text-webpack-plugin")
 
-var envDev = false;   // 是否是开发环境
+var envDev = true;   // 是否是开发环境
 
 const styleLoaderOptions = {
     loader: 'style-loader',
@@ -28,7 +28,7 @@ var config = {
             loader: "vue-loader",
             options: {
                 loaders: {
-                    css: envDev ? ['style-loader', 'css-loader']
+                    css: envDev ? ['vue-style-loader', 'css-loader']
                                 : ExtractTextPlugin.extract({
                                     use: cssOptions,
                                     fallback: styleLoaderOptions
@@ -46,7 +46,7 @@ var config = {
         }, {
             test: /\.css$/,
             use: envDev 
-            ? [{ loader: 'style-loader',options: { insertAt: 'top' } }, 
+            ? [{ loader: 'vue-style-loader',options: { insertAt: 'bottom' } }, 
                 { loader: 'css-loader' }]
             : ExtractTextPlugin.extract({
                 use: cssOptions,

@@ -16,7 +16,8 @@
     "koa-router": "^7.4.0",
     "koa-static": "^4.0.2",
     "koa2": "^2.0.0-alpha.7",
-    "memory-fs": "^0.4.1"
+    "memory-fs": "^0.4.1",
+    "vue-router": "^3.0.1"
   },
   "devDependencies": {
     "autoprefixer": "^7.2.4",

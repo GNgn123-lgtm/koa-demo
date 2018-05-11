@@ -14,7 +14,10 @@ global.readFile = readFile
 const webpackConf = require('../build/client.conf')
 const complier = webpack(webpackConf)
 var devMw = devMiddleware(complier, {
-    publicPath: webpackConf.output.publicPath
+    publicPath: webpackConf.output.publicPath,
+    stats: {
+        colors: true,
+    }
 })
 global.devMw = devMw
 

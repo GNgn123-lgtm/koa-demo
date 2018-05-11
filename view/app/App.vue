@@ -1,6 +1,11 @@
 <template>
     <div id="app">
-        lalal11112223344
+        lalal1111222334455
+        <p>
+            <router-link to="/foo">Go to Foo</router-link>
+            <router-link to="/baz">Go to Baz</router-link>
+        </p>
+        <router-view></router-view>
     </div>
 </template>
 
